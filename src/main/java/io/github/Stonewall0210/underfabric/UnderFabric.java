@@ -20,6 +20,6 @@ public class UnderFabric implements ModInitializer {
 		// Proceed with mild caution.
 
 		System.out.println("Hello UnderFabric world!");
-		Registry.register(Registry.ITEM, new Identifier("underfabric", "fabric_item"), TOY_KNIFE);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "toy_knife"), TOY_KNIFE);
 	}
 }
