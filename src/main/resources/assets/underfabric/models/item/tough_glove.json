@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"1": "underfabric:item/tough_glove_model",
-		"layer0": "underfabric:item/tough_glove",
-		"particle": "underfabric:item/tough_glove_model"
+		"particle": "underfabric:item/tough_glove_model",
+		"layer0": "underfabric:item/tough_glove"
 	},
 	"elements": [
 		{
@@ -25,6 +25,11 @@
 		"thirdperson_righthand": {
 			"translation": [0, -2, 4.5],
 			"scale": [0.34, 0.32, 0.5918]
+		},
+		"firstperson_righthand": {
+			"rotation": [17, 1, -4],
+			"translation": [7.5, -7.25, 0],
+			"scale": [1, 1, 2.08]
 		},
 		"fixed": {
 			"rotation": [0, -180, 0],

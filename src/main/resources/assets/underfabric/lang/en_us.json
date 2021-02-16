@@ -1,4 +1,8 @@
 {
+  "block.underfabric.ruins_brick": "Ruins Stone Bricks",
+  "block.underfabric.ruins_default": "Ruins Stone",
+  "block.underfabric.ruins_path": "Ruins Stone Pathway",
+  "block.underfabric.ruins_leaves": "Fallen Ruins Leaves Block",
   "item.underfabric.heart_red": "Determination",
   "item.underfabric.tough_glove": "Tough Glove",
   "item.underfabric.tough_glove.tooltip": "A worn pink leather glove. For five-fingered folk.",
