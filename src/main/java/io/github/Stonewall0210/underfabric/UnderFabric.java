@@ -10,8 +10,6 @@ import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-import javax.tools.Tool;
-
 public class UnderFabric implements ModInitializer {
 	// Create items that are not weapons, weapons are done further down.
 	public static final Item HEART_RED = new Item(new FabricItemSettings().group(ItemGroup.SEARCH));
@@ -56,12 +54,12 @@ public class UnderFabric implements ModInitializer {
 		System.out.println("Registered UnderFabric objects.");
 	}
 
-	public static ToolItem TOY_KNIFE = new ToyKnife(WeaponMaterial.INSTANCE, 2, -2.4F, new Item.Settings().group(ItemGroup.SEARCH));
-	public static ToolItem TOUGH_GLOVE = new ToughGlove(WeaponMaterial.INSTANCE, 4, -1F, new Item.Settings().group(ItemGroup.SEARCH));
-	public static ToolItem BALLET_SHOES = new BalletShoes(WeaponMaterial.INSTANCE, 6, -1.5F, new Item.Settings().group(ItemGroup.SEARCH));
-	public static ToolItem TORN_NOTEBOOK = new TornNotebook(WeaponMaterial.INSTANCE, 1, -0.5F, new Item.Settings().group(ItemGroup.SEARCH));
-	public static ToolItem BURNT_PAN = new BurntPan(WeaponMaterial.INSTANCE, 10, -3F, new Item.Settings().group(ItemGroup.SEARCH));
-	public static ToolItem EMPTY_GUN = new EmptyGun(WeaponMaterial.INSTANCE, 10, -3F, new Item.Settings().group(ItemGroup.SEARCH));
+	public static ToolItem TOY_KNIFE = new io.github.Stonewall0210.underfabric.ToyKnife(io.github.Stonewall0210.underfabric.WeaponMaterial.INSTANCE, 2, -2.4F, new Item.Settings().group(ItemGroup.SEARCH));
+	public static ToolItem TOUGH_GLOVE = new io.github.Stonewall0210.underfabric.ToughGlove(io.github.Stonewall0210.underfabric.WeaponMaterial.INSTANCE, 4, -1F, new Item.Settings().group(ItemGroup.SEARCH));
+	public static ToolItem BALLET_SHOES = new io.github.Stonewall0210.underfabric.BalletShoes(io.github.Stonewall0210.underfabric.WeaponMaterial.INSTANCE, 6, -1.5F, new Item.Settings().group(ItemGroup.SEARCH));
+	public static ToolItem TORN_NOTEBOOK = new io.github.Stonewall0210.underfabric.TornNotebook(io.github.Stonewall0210.underfabric.WeaponMaterial.INSTANCE, 1, -0.5F, new Item.Settings().group(ItemGroup.SEARCH));
+	public static ToolItem BURNT_PAN = new io.github.Stonewall0210.underfabric.BurntPan(io.github.Stonewall0210.underfabric.WeaponMaterial.INSTANCE, 10, -3F, new Item.Settings().group(ItemGroup.SEARCH));
+	public static ToolItem EMPTY_GUN = new io.github.Stonewall0210.underfabric.EmptyGun(io.github.Stonewall0210.underfabric.WeaponMaterial.INSTANCE, 10, -3F, new Item.Settings().group(ItemGroup.SEARCH));
 
 	public static final ItemGroup ITEM_GROUP = FabricItemGroupBuilder.create(
 			new Identifier("underfabric", "creative_tab"))
@@ -73,6 +71,7 @@ public class UnderFabric implements ModInitializer {
 				stacks.add(new ItemStack(UnderFabric.BALLET_SHOES));
 				stacks.add(new ItemStack(UnderFabric.TORN_NOTEBOOK));
 				stacks.add(new ItemStack(UnderFabric.BURNT_PAN));
+				stacks.add(new ItemStack(UnderFabric.EMPTY_GUN));
 				stacks.add(new ItemStack(UnderFabric.RUINS_DEFAULT));
 				stacks.add(new ItemStack(UnderFabric.RUINS_PATH));
 				stacks.add(new ItemStack(UnderFabric.RUINS_BRICK));
