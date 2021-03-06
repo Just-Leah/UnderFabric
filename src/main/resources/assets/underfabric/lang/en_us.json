@@ -8,7 +8,12 @@
   "item.underfabric.ballet_shoes.tooltip2": "you feel incredibly dangerous.",
   "item.underfabric.burnt_pan": "Burnt Pan",
   "item.underfabric.burnt_pan.tooltip": "Damage is rather consistent.",
+  "item.underfabric.empty_gun": "Empty Gun",
+  "item.underfabric.empty_gun.tooltip1": "An antique revolver.",
+  "item.underfabric.empty_gun.tooltip2": "It has no ammo.",
   "item.underfabric.heart_red": "Determination",
+  "item.underfabric.real_knife": "Real Knife",
+  "item.underfabric.real_knife.tooltip": "Here we are!",
   "item.underfabric.torn_notebook": "Torn Notebook",
   "item.underfabric.torn_notebook.tooltip": "Contains illegible scrawls.",
   "item.underfabric.tough_glove": "Tough Glove",
@@ -17,5 +22,7 @@
   "item.underfabric.toy_knife": "Toy Knife",
   "item.underfabric.toy_knife.tooltip1": "Made of plastic.",
   "item.underfabric.toy_knife.tooltip2": "A rarity nowadays.",
+  "item.underfabric.worn_dagger": "Worn Dagger",
+  "item.underfabric.worn_dagger.tooltip": "Perfect for cutting plants and vines.",
   "itemGroup.underfabric.creative_tab": "UnderFabric"
 }

@@ -1,5 +1,7 @@
 package io.github.Stonewall0210.underfabric;
 
+import io.github.Stonewall0210.underfabric.items.WeaponMaterial;
+import io.github.Stonewall0210.underfabric.items.weapons.*;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -22,9 +24,6 @@ public class UnderFabric implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
 		System.out.println("Registering UnderFabric objects:");
 
 		System.out.println("Registering UnderFabric items...");
@@ -36,6 +35,8 @@ public class UnderFabric implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("underfabric", "torn_notebook"), TORN_NOTEBOOK);
 		Registry.register(Registry.ITEM, new Identifier("underfabric", "burnt_pan"), BURNT_PAN);
 		Registry.register(Registry.ITEM, new Identifier("underfabric", "empty_gun"), EMPTY_GUN);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "worn_dagger"), WORN_DAGGER);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "real_knife"), REAL_KNIFE);
 
 		System.out.println("Registering UnderFabric blocks...");
 		// Register blocks
@@ -54,24 +55,34 @@ public class UnderFabric implements ModInitializer {
 		System.out.println("Registered UnderFabric objects.");
 	}
 
-	public static ToolItem TOY_KNIFE = new io.github.Stonewall0210.underfabric.ToyKnife(io.github.Stonewall0210.underfabric.WeaponMaterial.INSTANCE, 2, -2.4F, new Item.Settings().group(ItemGroup.SEARCH));
-	public static ToolItem TOUGH_GLOVE = new io.github.Stonewall0210.underfabric.ToughGlove(io.github.Stonewall0210.underfabric.WeaponMaterial.INSTANCE, 4, -1F, new Item.Settings().group(ItemGroup.SEARCH));
-	public static ToolItem BALLET_SHOES = new io.github.Stonewall0210.underfabric.BalletShoes(io.github.Stonewall0210.underfabric.WeaponMaterial.INSTANCE, 6, -1.5F, new Item.Settings().group(ItemGroup.SEARCH));
-	public static ToolItem TORN_NOTEBOOK = new io.github.Stonewall0210.underfabric.TornNotebook(io.github.Stonewall0210.underfabric.WeaponMaterial.INSTANCE, 1, -0.5F, new Item.Settings().group(ItemGroup.SEARCH));
-	public static ToolItem BURNT_PAN = new io.github.Stonewall0210.underfabric.BurntPan(io.github.Stonewall0210.underfabric.WeaponMaterial.INSTANCE, 10, -3F, new Item.Settings().group(ItemGroup.SEARCH));
-	public static ToolItem EMPTY_GUN = new io.github.Stonewall0210.underfabric.EmptyGun(io.github.Stonewall0210.underfabric.WeaponMaterial.INSTANCE, 10, -3F, new Item.Settings().group(ItemGroup.SEARCH));
+	// Create items to registered namespaces as per above
+	// The settings here are overridden by the settings within the item class itself, modifications are done there
+	public static ToolItem TOY_KNIFE = new ToyKnife(WeaponMaterial.INSTANCE, 2, -2.4F, new Item.Settings().group(ItemGroup.SEARCH));
+	public static ToolItem TOUGH_GLOVE = new ToughGlove(WeaponMaterial.INSTANCE, 4, -1F, new Item.Settings().group(ItemGroup.SEARCH));
+	public static ToolItem BALLET_SHOES = new BalletShoes(WeaponMaterial.INSTANCE, 6, -1.5F, new Item.Settings().group(ItemGroup.SEARCH));
+	public static ToolItem TORN_NOTEBOOK = new TornNotebook(WeaponMaterial.INSTANCE, 1, -0.5F, new Item.Settings().group(ItemGroup.SEARCH));
+	public static ToolItem BURNT_PAN = new BurntPan(WeaponMaterial.INSTANCE, 10, -3F, new Item.Settings().group(ItemGroup.SEARCH));
+	public static ToolItem EMPTY_GUN = new EmptyGun(WeaponMaterial.INSTANCE, 10, -3F, new Item.Settings().group(ItemGroup.SEARCH));
+	public static ToolItem WORN_DAGGER = new WornDagger(WeaponMaterial.INSTANCE, 15, -2.5F, new Item.Settings().group(ItemGroup.SEARCH));
+	public static ToolItem REAL_KNIFE = new RealKnife(WeaponMaterial.INSTANCE, 99, -1F, new Item.Settings().group(ItemGroup.SEARCH));
 
+	// Creates the creative tab items, they can otherwise be found at the bottom of the search tab, and nowhere else.
 	public static final ItemGroup ITEM_GROUP = FabricItemGroupBuilder.create(
 			new Identifier("underfabric", "creative_tab"))
 			.icon(() -> new ItemStack(UnderFabric.HEART_RED))
 			.appendItems(stacks -> {
+				// Items
 				stacks.add(new ItemStack(UnderFabric.HEART_RED));
+				// Weapons
 				stacks.add(new ItemStack(UnderFabric.TOY_KNIFE));
 				stacks.add(new ItemStack(UnderFabric.TOUGH_GLOVE));
 				stacks.add(new ItemStack(UnderFabric.BALLET_SHOES));
 				stacks.add(new ItemStack(UnderFabric.TORN_NOTEBOOK));
 				stacks.add(new ItemStack(UnderFabric.BURNT_PAN));
 				stacks.add(new ItemStack(UnderFabric.EMPTY_GUN));
+				stacks.add(new ItemStack(UnderFabric.WORN_DAGGER));
+				stacks.add(new ItemStack(UnderFabric.REAL_KNIFE));
+				// Blocks
 				stacks.add(new ItemStack(UnderFabric.RUINS_DEFAULT));
 				stacks.add(new ItemStack(UnderFabric.RUINS_PATH));
 				stacks.add(new ItemStack(UnderFabric.RUINS_BRICK));

@@ -1,5 +1,6 @@
-package io.github.Stonewall0210.underfabric;
+package io.github.Stonewall0210.underfabric.items.weapons;
 
+import io.github.Stonewall0210.underfabric.items.WeaponMaterial;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.*;
 import net.minecraft.text.Text;

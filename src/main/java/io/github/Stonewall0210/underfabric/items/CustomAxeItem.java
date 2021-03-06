@@ -1,4 +1,4 @@
-package io.github.Stonewall0210.underfabric;
+package io.github.Stonewall0210.underfabric.items;
 
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.ToolMaterial;
