@@ -1,5 +1,6 @@
 package io.github.Stonewall0210.underfabric;
 
+import io.github.Stonewall0210.underfabric.blocks.*;
 import io.github.Stonewall0210.underfabric.items.WeaponMaterial;
 import io.github.Stonewall0210.underfabric.items.weapons.*;
 import net.fabricmc.api.ModInitializer;
@@ -11,16 +12,18 @@ import net.minecraft.block.Material;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import org.lwjgl.system.CallbackI;
 
 public class UnderFabric implements ModInitializer {
 	// Create items that are not weapons, weapons are done further down.
 	public static final Item HEART_RED = new Item(new FabricItemSettings().group(ItemGroup.SEARCH));
 
 	// Create blocks
-	public static final Block RUINS_DEFAULT = new Block(FabricBlockSettings.of(Material.STONE));
-	public static final Block RUINS_PATH = new Block(FabricBlockSettings.of(Material.STONE));
-	public static final Block RUINS_BRICK = new Block(FabricBlockSettings.of(Material.STONE));
-	public static final Block RUINS_LEAVES = new Block(FabricBlockSettings.of(Material.LEAVES));
+	public static final Block RUINS_DEFAULT = new Block(FabricBlockSettings.of(Material.STONE).strength(1.3f));
+	public static final Block RUINS_PATH = new Block(FabricBlockSettings.of(Material.STONE).strength(1.2f));
+	public static final Block RUINS_BRICK = new Block(FabricBlockSettings.of(Material.STONE).strength(1.7f));
+	public static final Block RUINS_LEAVES = new Block(FabricBlockSettings.of(Material.LEAVES).strength(0.3f));
+	public static final Block SAVE_POINT = new savePoint(FabricBlockSettings.of(Material.AIR).strength(18000000f));
 
 	@Override
 	public void onInitialize() {
@@ -44,6 +47,7 @@ public class UnderFabric implements ModInitializer {
 		Registry.register(Registry.BLOCK, new Identifier("underfabric", "ruins_path"), RUINS_PATH);
 		Registry.register(Registry.BLOCK, new Identifier("underfabric", "ruins_brick"), RUINS_BRICK);
 		Registry.register(Registry.BLOCK, new Identifier("underfabric", "ruins_leaves"), RUINS_LEAVES);
+		Registry.register(Registry.BLOCK, new Identifier("underfabric", "save_point"), SAVE_POINT);
 
 		System.out.println("Registering UnderFabric block items...");
 		// Register Items for Blocks registered above
@@ -51,8 +55,33 @@ public class UnderFabric implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("underfabric", "ruins_path"), new BlockItem(RUINS_PATH, new FabricItemSettings().group(ItemGroup.SEARCH)));
 		Registry.register(Registry.ITEM, new Identifier("underfabric", "ruins_brick"), new BlockItem(RUINS_BRICK, new FabricItemSettings().group(ItemGroup.SEARCH)));
 		Registry.register(Registry.ITEM, new Identifier("underfabric", "ruins_leaves"), new BlockItem(RUINS_LEAVES, new FabricItemSettings().group(ItemGroup.SEARCH)));
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "save_point"), new BlockItem(SAVE_POINT, new FabricItemSettings()));
 
+		// Ascii art!
 		System.out.println("Registered UnderFabric objects.");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("░░░░██░░████████░░██░░░░░░░░░░░░░░░░░░░░░░░░░░");
+		System.out.println("░░██░░██░░░░░░░░██░░██░░░░░░░░░░░░░░░░░░░░░░░░");
+		System.out.println("░░██░░░░░░░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░░░░░");
+		System.out.println("░░██░░░░░░░░░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░░░");
+		System.out.println("██░░░░██░░░░██░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░");
+		System.out.println("██░░░░░░░░░░░░░░░░░░░░░░░░████░░░░░░░░░░░░░░░░");
+		System.out.println("██░░░░░░████░░░░░░░░░░░░░░░░░░██████████████░░");
+		System.out.println("██░░██░░██░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░██");
+		System.out.println("██░░░░████████░░░░░░░░░░░░░░░░░░░░░░░░██████░░");
+		System.out.println("██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░");
+		System.out.println("██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░");
+		System.out.println("██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░");
+		System.out.println("██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░");
+		System.out.println("██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░");
+		System.out.println("░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░");
+		System.out.println("░░██░░░░████░░░░████████░░░░████░░░░██░░░░░░░░");
+		System.out.println("░░██░░░░████░░██░░░░░░██░░██░░██░░░░██░░░░░░░░");
+		System.out.println("░░██░░██░░░░██░░░░░░░░░░██░░░░██░░██░░░░░░░░░░");
+		System.out.println("░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░░░░░");
+		System.out.println("Arf Arf!");
 	}
 
 	// Create items to registered namespaces as per above
