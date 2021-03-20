@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:fire_charge"
+    },
+    "title": {
+      "translate":"advancements.underfabric.toriel"
+    },
+    "frame": "task",
+    "description": {
+      "translate": "advancements.underfabric.toriel.description"
+    },
+    "show_toast": "true",
+    "announce_to_chat": "true",
+    "hidden": "true"
+  },
+  "parent": "underfabric:start",
+  "criteria": {
+    "placeholder": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

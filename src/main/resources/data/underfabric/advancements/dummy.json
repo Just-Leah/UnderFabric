@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:leather"
+    },
+    "title": {
+      "translate":"advancements.underfabric.dummy"
+    },
+    "frame": "task",
+    "description": {
+      "translate": "advancements.underfabric.dummy.description"
+    },
+    "show_toast": "true",
+    "announce_to_chat": "true",
+    "hidden": "true"
+  },
+  "parent": "underfabric:ruins",
+  "criteria": {
+    "placeholder": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

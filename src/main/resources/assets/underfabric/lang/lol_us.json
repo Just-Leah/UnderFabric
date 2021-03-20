@@ -24,5 +24,7 @@
   "item.underfabric.toy_knife.tooltip2": "dont throw this away",
   "item.underfabric.worn_dagger": "Slightly larger knife",
   "item.underfabric.worn_dagger.tooltip": "You can throw this one away, it aint gonna hurt any turtles",
-  "itemGroup.underfabric.creative_tab": "Uwa!! Nice creative tab♫"
+  "itemGroup.underfabric.creative_tab": "Uwa!! Nice creative tab♫",
+  "advancements.underfabric.start": "RIP Genderless Child",
+  "advancements.underfabric.start.description": "You really think a bed of flowers will save someone from falling into a mountain?"
 }

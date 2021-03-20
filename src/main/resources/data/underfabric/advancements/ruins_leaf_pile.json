@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "underfabric:ruins_leaves"
+    },
+    "title": {
+      "translate":"advancements.underfabric.ruins_leaf_pile"
+    },
+    "frame": "goal",
+    "description": {
+      "translate": "advancements.underfabric.ruins_leaf_pile.description"
+    },
+    "show_toast": "true",
+    "announce_to_chat": "true",
+    "hidden": "false"
+  },
+  "parent": "underfabric:ruins",
+  "criteria": {
+    "placeholder": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

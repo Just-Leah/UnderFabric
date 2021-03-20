@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "underfabric:ruins_brick"
+    },
+    "title": {
+      "translate":"advancements.underfabric.ruins"
+    },
+    "frame": "goal",
+    "description": {
+      "translate": "advancements.underfabric.ruins.description"
+    },
+    "show_toast": "true",
+    "announce_to_chat": "true",
+    "hidden": "false"
+  },
+  "parent": "underfabric:start",
+  "criteria": {
+    "placeholder": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

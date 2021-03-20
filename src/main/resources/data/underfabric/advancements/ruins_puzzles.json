@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:lever"
+    },
+    "title": {
+      "translate":"advancements.underfabric.ruins_puzzles"
+    },
+    "frame": "task",
+    "description": {
+      "translate": "advancements.underfabric.ruins_puzzles.description"
+    },
+    "show_toast": "true",
+    "announce_to_chat": "true",
+    "hidden": "true"
+  },
+  "parent": "underfabric:ruins",
+  "criteria": {
+    "placeholder": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

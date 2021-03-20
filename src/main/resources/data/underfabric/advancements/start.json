@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "underfabric:heart_red"
+    },
+    "title": {
+      "translate":"advancements.underfabric.start"
+    },
+    "frame": "challenge",
+    "background": "underfabric:textures/block/ruins_brick.png",
+    "description": {
+      "translate": "advancements.underfabric.start.description"
+    },
+    "show_toast": "true",
+    "announce_to_chat": "true",
+    "hidden": "true"
+  },
+  "criteria": {
+    "dt_in_inv": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "underfabric:heart_red"
+          }
+        ]
+      }
+    }
+  }
+}

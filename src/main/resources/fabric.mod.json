@@ -33,5 +33,9 @@
   },
   "suggests": {
     "another-mod": "*"
+  },
+  "custom": {
+    "stopmodreposts:showToast": true,
+    "stopmodreposts:showButton": true
   }
 }
