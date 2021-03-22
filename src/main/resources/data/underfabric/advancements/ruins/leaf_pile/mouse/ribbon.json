@@ -1,20 +1,20 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:ghast_tear"
+      "item": "minecraft:loom"
     },
     "title": {
-      "translate":"advancements.underfabric.napstablook"
+      "translate":"advancements.underfabric.ribbon"
     },
     "frame": "task",
     "description": {
-      "translate": "advancements.underfabric.napstablook.description"
+      "translate": "advancements.underfabric.ribbon.description"
     },
     "show_toast": "true",
     "announce_to_chat": "true",
     "hidden": "true"
   },
-  "parent": "underfabric:ruins_mouse",
+  "parent": "underfabric:ruins/leaf_pile/mouse/napstablook",
   "criteria": {
     "placeholder": {
       "trigger": "minecraft:impossible"

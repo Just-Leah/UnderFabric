@@ -1,20 +1,20 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:dried_kelp"
+      "item": "minecraft:stone"
     },
     "title": {
-      "translate":"advancements.underfabric.candy"
+      "translate":"advancements.underfabric.rock"
     },
     "frame": "task",
     "description": {
-      "translate": "advancements.underfabric.candy.description"
+      "translate": "advancements.underfabric.rock.description"
     },
     "show_toast": "true",
     "announce_to_chat": "true",
     "hidden": "true"
   },
-  "parent": "underfabric:ruins_leaf_pile",
+  "parent": "underfabric:ruins/leaf_pile",
   "criteria": {
     "placeholder": {
       "trigger": "minecraft:impossible"

@@ -1,20 +1,20 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:infested_stone_bricks"
+      "item": "minecraft:ghast_tear"
     },
     "title": {
-      "translate":"advancements.underfabric.ruins_mouse"
+      "translate":"advancements.underfabric.napstablook"
     },
-    "frame": "goal",
+    "frame": "challenge",
     "description": {
-      "translate": "advancements.underfabric.ruins_mouse.description"
+      "translate": "advancements.underfabric.napstablook.description"
     },
     "show_toast": "true",
     "announce_to_chat": "true",
     "hidden": "false"
   },
-  "parent": "underfabric:ruins_leaf_pile",
+  "parent": "underfabric:ruins/leaf_pile/mouse",
   "criteria": {
     "placeholder": {
       "trigger": "minecraft:impossible"

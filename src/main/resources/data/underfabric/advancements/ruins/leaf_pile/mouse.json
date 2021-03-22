@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:infested_stone_bricks"
+    },
+    "title": {
+      "translate":"advancements.underfabric.ruins_mouse"
+    },
+    "frame": "goal",
+    "description": {
+      "translate": "advancements.underfabric.ruins_mouse.description"
+    },
+    "show_toast": "true",
+    "announce_to_chat": "true",
+    "hidden": "false"
+  },
+  "parent": "underfabric:ruins/leaf_pile",
+  "criteria": {
+    "placeholder": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

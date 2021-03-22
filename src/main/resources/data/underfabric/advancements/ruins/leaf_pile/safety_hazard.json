@@ -14,7 +14,7 @@
     "announce_to_chat": "true",
     "hidden": "true"
   },
-  "parent": "underfabric:ruins_leaf_pile",
+  "parent": "underfabric:ruins/leaf_pile",
   "criteria": {
     "placeholder": {
       "trigger": "minecraft:impossible"

@@ -1,20 +1,20 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:stone"
+      "item": "minecraft:cookie"
     },
     "title": {
-      "translate":"advancements.underfabric.rock"
+      "translate":"advancements.underfabric.spider_donut"
     },
     "frame": "task",
     "description": {
-      "translate": "advancements.underfabric.rock.description"
+      "translate": "advancements.underfabric.spider_donut.description"
     },
     "show_toast": "true",
     "announce_to_chat": "true",
     "hidden": "true"
   },
-  "parent": "underfabric:ruins_leaf_pile",
+  "parent": "underfabric:ruins/leaf_pile/mouse/spider_sale",
   "criteria": {
     "placeholder": {
       "trigger": "minecraft:impossible"

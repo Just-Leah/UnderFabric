@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:glass_bottle"
+    },
+    "title": {
+      "translate":"advancements.underfabric.spider_cider"
+    },
+    "frame": "task",
+    "description": {
+      "translate": "advancements.underfabric.spider_cider.description"
+    },
+    "show_toast": "true",
+    "announce_to_chat": "true",
+    "hidden": "true"
+  },
+  "parent": "underfabric:ruins/leaf_pile/mouse/spider_sale",
+  "criteria": {
+    "placeholder": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
