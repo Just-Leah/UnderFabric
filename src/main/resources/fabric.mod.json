@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "underfabric",
-  "version": "1.0.1",
+  "version": "1.0.2",
 
   "name": "UnderFabric",
   "description": "An Undertale mod for Fabric",
@@ -33,9 +33,5 @@
   },
   "suggests": {
     "another-mod": "*"
-  },
-  "custom": {
-    "stopmodreposts:showToast": true,
-    "stopmodreposts:showButton": true
   }
 }
