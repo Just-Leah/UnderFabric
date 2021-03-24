@@ -11,7 +11,7 @@
       "translate": "advancements.underfabric.spider_sale.description"
     },
     "show_toast": "true",
-    "announce_to_chat": "true",
+    "announce_to_chat": "false",
     "hidden": "true"
   },
   "parent": "underfabric:ruins/leaf_pile/mouse/napstablook",

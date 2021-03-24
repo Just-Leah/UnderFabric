@@ -11,7 +11,7 @@
       "translate": "advancements.underfabric.flowey.description"
     },
     "show_toast": "true",
-    "announce_to_chat": "true",
+    "announce_to_chat": "false",
     "hidden": "true"
   },
   "parent": "underfabric:start",

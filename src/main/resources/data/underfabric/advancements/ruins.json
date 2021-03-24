@@ -11,7 +11,7 @@
       "translate": "advancements.underfabric.ruins.description"
     },
     "show_toast": "true",
-    "announce_to_chat": "true",
+    "announce_to_chat": "false",
     "hidden": "false"
   },
   "parent": "underfabric:start",
