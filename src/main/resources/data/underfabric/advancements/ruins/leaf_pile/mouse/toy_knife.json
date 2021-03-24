@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "underfabric:toy_knife"
+    },
+    "title": {
+      "translate":"advancements.underfabric.toy_knife"
+    },
+    "frame": "task",
+    "description": {
+      "translate": "advancements.underfabric.toy_knife.description"
+    },
+    "show_toast": "true",
+    "announce_to_chat": "false",
+    "hidden": "true"
+  },
+  "parent": "underfabric:ruins/leaf_pile/mouse/napstablook",
+  "criteria": {
+    "dt_in_inv": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "underfabric:toy_knife"
+          }
+        ]
+      }
+    }
+  }
+}

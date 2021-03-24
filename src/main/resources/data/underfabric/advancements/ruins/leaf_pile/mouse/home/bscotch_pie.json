@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:cake"
+    },
+    "title": {
+      "translate":"advancements.underfabric.home"
+    },
+    "frame": "task",
+    "description": {
+      "translate": "advancements.underfabric.home.description"
+    },
+    "show_toast": "true",
+    "announce_to_chat": "false",
+    "hidden": "true"
+  },
+  "parent": "underfabric:ruins/leaf_pile/mouse/home",
+  "criteria": {
+    "placeholder": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

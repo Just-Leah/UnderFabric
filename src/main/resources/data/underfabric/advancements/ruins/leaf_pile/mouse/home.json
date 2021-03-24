@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "underfabric:ruins_brick"
+    },
+    "title": {
+      "translate":"advancements.underfabric.home"
+    },
+    "frame": "goal",
+    "description": {
+      "translate": "advancements.underfabric.home.description"
+    },
+    "show_toast": "true",
+    "announce_to_chat": "false",
+    "hidden": "false"
+  },
+  "parent": "underfabric:ruins/leaf_pile/mouse/napstablook",
+  "criteria": {
+    "placeholder": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
