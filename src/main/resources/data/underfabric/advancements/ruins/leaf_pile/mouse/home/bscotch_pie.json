@@ -4,11 +4,11 @@
       "item": "minecraft:cake"
     },
     "title": {
-      "translate":"advancements.underfabric.home"
+      "translate":"advancements.underfabric.bscotch_pie"
     },
     "frame": "task",
     "description": {
-      "translate": "advancements.underfabric.home.description"
+      "translate": "advancements.underfabric.bscotch_pie.description"
     },
     "show_toast": "true",
     "announce_to_chat": "false",
