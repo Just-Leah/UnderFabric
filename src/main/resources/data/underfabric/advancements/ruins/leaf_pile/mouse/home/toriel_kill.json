@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:fire_charge"
+    },
+    "title": {
+      "translate":"advancements.underfabric.toriel_kill"
+    },
+    "frame": "challenge",
+    "description": {
+      "translate": "advancements.underfabric.toriel_kill.description"
+    },
+    "show_toast": "true",
+    "announce_to_chat": "false",
+    "hidden": "true"
+  },
+  "parent": "underfabric:ruins/leaf_pile/mouse/home",
+  "criteria": {
+    "placeholder": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -66,5 +66,9 @@
   "item.underfabric.toy_knife.tooltip2": "A rarity nowadays.",
   "item.underfabric.worn_dagger": "Worn Dagger",
   "item.underfabric.worn_dagger.tooltip": "Perfect for cutting plants and vines.",
-  "itemGroup.underfabric.creative_tab": "UnderFabric"
+  "itemGroup.underfabric.creative_tab": "UnderFabric",
+  "advancements.underfabric.toriel_spare": "Mother Knows Best",
+  "advancements.underfabric.toriel_spare.description": "§oDon't get too cocky",
+  "advancements.underfabric.toriel_kill": "§o§4B e  g o o d ,  w o n ' t  y o u ?",
+  "advancements.underfabric.toriel_kill.description": "§o§4M  y   c  h  i  l  d . . ."
 }
