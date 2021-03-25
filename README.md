@@ -2,6 +2,8 @@
 # UnderFabric
 **UnderFabric** is a Minecraft mod that adds a bunch of stuff from the game **Undertale**.
 
+[You can find the discord for it here](https://discord.gg/6QD3DFHw)
+
 ## What is currently done
 - Weapons (rudimentary, explained later on)
 
