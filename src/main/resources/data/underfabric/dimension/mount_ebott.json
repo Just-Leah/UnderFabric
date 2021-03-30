@@ -1,0 +1,57 @@
+{
+  "type": "minecraft:overworld_caves",
+  "generator": {
+    "type": "minecraft:noise",
+    "seed": 2015,
+    "settings": {
+      "bedrock_roof_position": 256,
+      "bedrock_floor_position": 0,
+      "sea_level": 0,
+      "disable_mob_generation": true,
+      "default_block": {
+        "Name": "minecraft:stone"
+      },
+      "default_fluid": {
+        "Name": "minecraft:water"
+      },
+      "structures": {
+        "stronghold": {
+          "distance": 0,
+          "count": 0,
+          "spread": 0
+        },
+        "structures": {
+        }
+      },
+      "noise": {
+        "height": 256,
+        "size_horizontal": 1,
+        "size_vertical": 1,
+        "density_factor": 1.0,
+        "density_offset": 1.0,
+        "simplex_surface_noise": false,
+        "sampling": {
+          "xz_scale": 1.0,
+          "xz_factor": 1.0,
+          "y_scale": 1.0,
+          "y_factor": 1.0
+        },
+        "top_slide": {
+          "target": 1,
+          "size": 1,
+          "offset": 1
+        },
+        "bottom_slide": {
+          "target": 1,
+          "size": 1,
+          "offset": 1
+        }
+      }
+    },
+    "biome_source": {
+      "seed": 2015,
+      "type": "minecraft:fixed",
+      "biome": "127"
+    }
+  }
+}

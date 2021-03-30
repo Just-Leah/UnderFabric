@@ -39,6 +39,10 @@
   "advancements.underfabric.start.description": "It's the first of many beginnings, the story belongs to you",
   "advancements.underfabric.toriel": "Guide and Guardian",
   "advancements.underfabric.toriel.description": "Your new better teacher",
+  "advancements.underfabric.toriel_kill": "§o§4B e  g o o d ,  w o n ' t  y o u ?",
+  "advancements.underfabric.toriel_kill.description": "§o§4M  y   c  h  i  l  d . . .",
+  "advancements.underfabric.toriel_spare": "Mother Knows Best",
+  "advancements.underfabric.toriel_spare.description": "§oDon't get too cocky",
   "advancements.underfabric.toy_knife": "Plastic Weapon",
   "advancements.underfabric.toy_knife.description": "Lets be honest here, anything is better than that stick.",
   "block.underfabric.ruins_brick": "Ruins Stone Bricks",
@@ -66,9 +70,6 @@
   "item.underfabric.toy_knife.tooltip2": "A rarity nowadays.",
   "item.underfabric.worn_dagger": "Worn Dagger",
   "item.underfabric.worn_dagger.tooltip": "Perfect for cutting plants and vines.",
-  "itemGroup.underfabric.creative_tab": "UnderFabric",
-  "advancements.underfabric.toriel_spare": "Mother Knows Best",
-  "advancements.underfabric.toriel_spare.description": "§oDon't get too cocky",
-  "advancements.underfabric.toriel_kill": "§o§4B e  g o o d ,  w o n ' t  y o u ?",
-  "advancements.underfabric.toriel_kill.description": "§o§4M  y   c  h  i  l  d . . ."
+  "item.underfabric.bandage_consumable": "Bandage",
+  "itemGroup.underfabric.creative_tab": "UnderFabric"
 }
