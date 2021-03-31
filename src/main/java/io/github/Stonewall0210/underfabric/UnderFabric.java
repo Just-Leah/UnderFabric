@@ -74,6 +74,34 @@ public class UnderFabric implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("underfabric", "bscotch_pie"), BSCOTCH_PIE);
 		Registry.register(Registry.ITEM, new Identifier("underfabric", "snail_pie"), SNAIL_PIE);
 		Registry.register(Registry.ITEM, new Identifier("underfabric", "snowman_piece"), SNOWMAN_PIECE);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "nice_cream"), NICE_CREAM);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "bisicle"), BISICLE);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "unisicle"), UNISICLE);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "cinnamon_bunny"), CINNAMON_BUNNY);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "astronaut_food"), ASTRONAUT_FOOD);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "crab_apple"), CRAB_APPLE);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "sea_tea"), SEA_TEA);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "abandoned_quiche"), ABANDONED_QUICHE);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "temmie_flakes"), TEMMIE_FLAKES);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "dog_salad"), DOG_SALAD);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "instant_noodles"), INSTANT_NOODLES);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "hot_dog"), HOT_DOG);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "hot_cat"), HOT_CAT);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "junk_food"), JUNK_FOOD);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "hush_puppy"), HUSH_PUPPY);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "starfait"), STARFAIT);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "glamburger"), GLAMBURGER);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "legendary_hero"), LEGENDARY_HERO);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "face_steak"), FACE_STEAK);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "popato_chisps"), POPATO_CHISPS);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "bad_memory"), BAD_MEMORY);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "last_dream"), LAST_DREAM);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "puppy_ice_cream"), PUPPY_ICE_CREAM);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "pumpkin_rings"), PUMPKIN_RINGS);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "rock_candy"), ROCK_CANDY);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "croquet_roll"), CROQUET_ROLL);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "ghost_fruit"), GHOST_FRUIT);
+		Registry.register(Registry.ITEM, new Identifier("underfabric", "stoic_onion"), STOIC_ONION);
 
 		System.out.println("Registering UnderFabric weapons...");
 		//Register Weapons
@@ -147,7 +175,6 @@ public class UnderFabric implements ModInitializer {
 			.appendItems(stacks -> {
 				// Items
 				stacks.add(new ItemStack(UnderFabric.HEART_RED));
-				stacks.add(new ItemStack(UnderFabric.BANDAGE_CONSUMABLE));
 				// Weapons
 				stacks.add(new ItemStack(UnderFabric.TOY_KNIFE));
 				stacks.add(new ItemStack(UnderFabric.TOUGH_GLOVE));
@@ -157,6 +184,42 @@ public class UnderFabric implements ModInitializer {
 				stacks.add(new ItemStack(UnderFabric.EMPTY_GUN));
 				stacks.add(new ItemStack(UnderFabric.WORN_DAGGER));
 				stacks.add(new ItemStack(UnderFabric.REAL_KNIFE));
+				// Consumables
+				stacks.add(new ItemStack(UnderFabric.BANDAGE_CONSUMABLE));
+				stacks.add(new ItemStack(UnderFabric.MONSTER_CANDY));
+				stacks.add(new ItemStack(UnderFabric.SPIDER_DONUT));
+				stacks.add(new ItemStack(UnderFabric.SPIDER_CIDER));
+				stacks.add(new ItemStack(UnderFabric.BSCOTCH_PIE));
+				stacks.add(new ItemStack(UnderFabric.SNAIL_PIE));
+				stacks.add(new ItemStack(UnderFabric.SNOWMAN_PIECE));
+				stacks.add(new ItemStack(UnderFabric.NICE_CREAM));
+				stacks.add(new ItemStack(UnderFabric.BISICLE));
+				stacks.add(new ItemStack(UnderFabric.UNISICLE));
+				stacks.add(new ItemStack(UnderFabric.CINNAMON_BUNNY));
+				stacks.add(new ItemStack(UnderFabric.ASTRONAUT_FOOD));
+				stacks.add(new ItemStack(UnderFabric.CRAB_APPLE));
+				stacks.add(new ItemStack(UnderFabric.SEA_TEA));
+				stacks.add(new ItemStack(UnderFabric.ABANDONED_QUICHE));
+				stacks.add(new ItemStack(UnderFabric.TEMMIE_FLAKES));
+				stacks.add(new ItemStack(UnderFabric.DOG_SALAD));
+				stacks.add(new ItemStack(UnderFabric.INSTANT_NOODLES));
+				stacks.add(new ItemStack(UnderFabric.HOT_DOG));
+				stacks.add(new ItemStack(UnderFabric.HOT_CAT));
+				stacks.add(new ItemStack(UnderFabric.JUNK_FOOD));
+				stacks.add(new ItemStack(UnderFabric.HUSH_PUPPY));
+				stacks.add(new ItemStack(UnderFabric.STARFAIT));
+				stacks.add(new ItemStack(UnderFabric.GLAMBURGER));
+				stacks.add(new ItemStack(UnderFabric.LEGENDARY_HERO));
+				stacks.add(new ItemStack(UnderFabric.FACE_STEAK));
+				stacks.add(new ItemStack(UnderFabric.POPATO_CHISPS));
+				stacks.add(new ItemStack(UnderFabric.BAD_MEMORY));
+				stacks.add(new ItemStack(UnderFabric.LAST_DREAM));
+				stacks.add(new ItemStack(UnderFabric.PUPPY_ICE_CREAM));
+				stacks.add(new ItemStack(UnderFabric.PUMPKIN_RINGS));
+				stacks.add(new ItemStack(UnderFabric.ROCK_CANDY));
+				stacks.add(new ItemStack(UnderFabric.CROQUET_ROLL));
+				stacks.add(new ItemStack(UnderFabric.GHOST_FRUIT));
+				stacks.add(new ItemStack(UnderFabric.STOIC_ONION));
 				// Blocks
 				stacks.add(new ItemStack(UnderFabric.RUINS_DEFAULT));
 				stacks.add(new ItemStack(UnderFabric.RUINS_PATH));
