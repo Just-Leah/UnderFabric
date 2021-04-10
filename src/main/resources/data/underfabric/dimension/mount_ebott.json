@@ -13,7 +13,10 @@
         "Name": "minecraft:stone"
       },
       "default_fluid": {
-        "Name": "minecraft:water"
+        "Name": "minecraft:water",
+        "Properties": {
+          "level": "15"
+        }
       },
       "structures": {
         "stronghold": {
