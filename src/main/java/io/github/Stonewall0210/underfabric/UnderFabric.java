@@ -3,6 +3,7 @@ package io.github.Stonewall0210.underfabric;
 import io.github.Stonewall0210.underfabric.blocks.savePoint;
 import io.github.Stonewall0210.underfabric.items.WeaponMaterial;
 import io.github.Stonewall0210.underfabric.items.weapons.*;
+import io.github.Stonewall0210.underfabric.items.consumeables.*;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -10,6 +11,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.item.*;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import org.lwjgl.system.CallbackI;
@@ -18,7 +20,7 @@ public class UnderFabric implements ModInitializer {
 	// Create items that are not weapons, weapons are done further down.
 	public static final Item HEART_RED = new Item(new FabricItemSettings().group(ItemGroup.MISC));
 	public static final Item BANDAGE_CONSUMABLE = new Item(new FabricItemSettings().group(ItemGroup.FOOD));
-	public static final Item MONSTER_CANDY = new Item(new FabricItemSettings().group(ItemGroup.FOOD));
+	public static final monsterCandy MONSTER_CANDY = new monsterCandy(new FabricItemSettings().group(ItemGroup.FOOD));
 	public static final Item SPIDER_DONUT = new Item(new FabricItemSettings().group(ItemGroup.FOOD));
 	public static final Item SPIDER_CIDER = new Item(new FabricItemSettings().group(ItemGroup.FOOD));
 	public static final Item BSCOTCH_PIE = new Item(new FabricItemSettings().group(ItemGroup.FOOD));
@@ -59,6 +61,10 @@ public class UnderFabric implements ModInitializer {
 	public static final Block RUINS_BRICK = new Block(FabricBlockSettings.of(Material.STONE).strength(1.7f));
 	public static final Block RUINS_LEAVES = new Block(FabricBlockSettings.of(Material.LEAVES).strength(0.3f));
 	public static final Block SAVE_POINT = new savePoint(FabricBlockSettings.of(Material.AIR).strength(18000000f));
+
+	//Create sounds
+	public static final Identifier CONSUME_ITEM_ID = new Identifier("underfabric:item.consume");
+	public static SoundEvent CONSUME_ITEM = new SoundEvent(CONSUME_ITEM_ID);
 
 	@Override
 	public void onInitialize() {
@@ -129,6 +135,10 @@ public class UnderFabric implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("underfabric", "ruins_brick"), new BlockItem(RUINS_BRICK, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS)));
 		Registry.register(Registry.ITEM, new Identifier("underfabric", "ruins_leaves"), new BlockItem(RUINS_LEAVES, new FabricItemSettings().group(ItemGroup.DECORATIONS)));
 		Registry.register(Registry.ITEM, new Identifier("underfabric", "save_point"), new BlockItem(SAVE_POINT, new FabricItemSettings().group(ItemGroup.DECORATIONS)));
+
+		System.out.println("Registering UnderFabric sounds...");
+		// Register sounds
+		Registry.register(Registry.SOUND_EVENT, UnderFabric.CONSUME_ITEM_ID, CONSUME_ITEM);
 
 		// Ascii art!
 		System.out.println("Registered UnderFabric objects.");

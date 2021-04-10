@@ -1,0 +1,8 @@
+{
+  "item.consume":{
+    "subtitle": "subtitle.underfabric.consume_item",
+    "sounds": [
+      "underfabric:snd_heal_c"
+    ]
+  }
+}
