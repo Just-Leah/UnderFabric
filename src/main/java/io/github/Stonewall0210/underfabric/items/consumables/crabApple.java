@@ -2,6 +2,7 @@ package io.github.Stonewall0210.underfabric.items.consumables;
 
 import io.github.Stonewall0210.underfabric.UnderFabric;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -11,8 +12,8 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
-public class snailPie extends Item{
-    public snailPie(Item.Settings group) {
+public class crabApple extends Item{
+    public crabApple(Item.Settings group) {
         super(new FabricItemSettings().group(ItemGroup.FOOD).maxCount(1));
     }
 
@@ -20,7 +21,7 @@ public class snailPie extends Item{
     public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
         playerEntity.playSound(UnderFabric.CONSUME_ITEM, 1.0F, 1.0F);
         playerEntity.setStackInHand(hand, new ItemStack(Items.AIR));
-        playerEntity.setHealth(playerEntity.getMaxHealth() - 1);
+        playerEntity.heal(18);
         return TypedActionResult.success(playerEntity.getStackInHand(hand));
     }
 }

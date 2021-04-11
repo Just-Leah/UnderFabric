@@ -105,5 +105,6 @@
   "item.underfabric.unisicle": "Unisicle",
   "item.underfabric.worn_dagger": "Worn Dagger",
   "item.underfabric.worn_dagger.tooltip": "Perfect for cutting plants and vines.",
-  "itemGroup.underfabric.creative_tab": "UnderFabric"
+  "itemGroup.underfabric.creative_tab": "UnderFabric",
+  "subtitle.underfabric.consume_item": "Health Gained"
 }
