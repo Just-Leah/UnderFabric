@@ -2,7 +2,7 @@
 # UnderFabric
 **UnderFabric** is a Minecraft mod that adds a bunch of stuff from the game **Undertale**.
 
-You can follow progress being made in my [discord server](https://discord.gg/6QD3DFHw)
+You can follow progress being made in my [discord server](https://discord.gg/qvfHGEXhXK)
 ## What is currently done
 - Weapons (rudimentary, explained later on)
 
@@ -21,8 +21,8 @@ For stable versions download a *Release*, for beta versions that are not done bu
 
 There is a GitHub where you can see the source, I won’t release the mods there, and the download link will be to Modrinth so that I can track people downloading
 
-- Latest beta is [1.2.0](https://modrinth.com/mod/underfabric/version/GrH5Klrg)
+- Latest alpha is [1.2.1](https://modrinth.com/mod/underfabric/version/W36MkxmB)
 
-- Latest alpha is [1.0.2](https://modrinth.com/mod/underfabric/version/W6uwI770)
+- Latest beta is [1.2.0](https://modrinth.com/mod/underfabric/version/GrH5Klrg)
 
 - Latest release is [1.0.0](https://modrinth.com/mod/underfabric/version/Df0TSN6O)
