@@ -15,7 +15,7 @@
       "default_fluid": {
         "Name": "minecraft:water",
         "Properties": {
-          "level": "15"
+          "level": "0"
         }
       },
       "structures": {

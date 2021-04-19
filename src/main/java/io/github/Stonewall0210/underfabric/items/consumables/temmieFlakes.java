@@ -7,6 +7,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
@@ -22,6 +24,9 @@ public class temmieFlakes extends Item{
         playerEntity.setStackInHand(hand, new ItemStack(Items.AIR));
         playerEntity.heal(2);
         playerEntity.setMovementSpeed(1F);
+        if (world.isClient) {
+            playerEntity.sendMessage(new TranslatableText("text.underfabric.placeholder_use"), false);
+        }
         return TypedActionResult.success(playerEntity.getStackInHand(hand));
     }
 }

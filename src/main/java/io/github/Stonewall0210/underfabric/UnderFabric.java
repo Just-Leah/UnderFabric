@@ -15,6 +15,8 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
+import java.util.Arrays;
+
 public class UnderFabric implements ModInitializer {
 	// Create items that are not weapons, weapons are done further down.
 	public static final Item HEART_RED = new Item(new FabricItemSettings().group(ItemGroup.MISC));
@@ -34,7 +36,7 @@ public class UnderFabric implements ModInitializer {
 	public static final seaTea SEA_TEA = new seaTea(new FabricItemSettings().group(ItemGroup.FOOD));
 	public static final abandonedQuiche ABANDONED_QUICHE = new abandonedQuiche(new FabricItemSettings().group(ItemGroup.FOOD));
 	public static final temmieFlakes TEMMIE_FLAKES = new temmieFlakes(new FabricItemSettings().group(ItemGroup.FOOD));
-	public static final monsterCandy DOG_SALAD = new monsterCandy(new FabricItemSettings().group(ItemGroup.FOOD));
+	public static final dogSalad DOG_SALAD = new dogSalad(new FabricItemSettings().group(ItemGroup.FOOD));
 	public static final monsterCandy INSTANT_NOODLES = new monsterCandy(new FabricItemSettings().group(ItemGroup.FOOD));
 	public static final monsterCandy HOT_DOG = new monsterCandy(new FabricItemSettings().group(ItemGroup.FOOD));
 	public static final monsterCandy HOT_CAT = new monsterCandy(new FabricItemSettings().group(ItemGroup.FOOD));
@@ -64,6 +66,8 @@ public class UnderFabric implements ModInitializer {
 	//Create sounds
 	public static final Identifier CONSUME_ITEM_ID = new Identifier("underfabric:item.consume");
 	public static SoundEvent CONSUME_ITEM = new SoundEvent(CONSUME_ITEM_ID);
+	public static final Identifier FLOWEY_MUS_ID = new Identifier("underfabric:music.flowey");
+	public static SoundEvent FLOWEY_MUS = new SoundEvent(FLOWEY_MUS_ID);
 
 	@Override
 	public void onInitialize() {
@@ -138,32 +142,12 @@ public class UnderFabric implements ModInitializer {
 		System.out.println("Registering UnderFabric sounds...");
 		// Register sounds
 		Registry.register(Registry.SOUND_EVENT, UnderFabric.CONSUME_ITEM_ID, CONSUME_ITEM);
+		Registry.register(Registry.SOUND_EVENT, UnderFabric.FLOWEY_MUS_ID, FLOWEY_MUS);
 
 		// Ascii art!
-		System.out.println("Registered UnderFabric objects.");
-		System.out.println(" ");
-		System.out.println(" ");
-		System.out.println(" ");
-		System.out.println("░░░░██░░████████░░██░░░░░░░░░░░░░░░░░░░░░░░░░░");
-		System.out.println("░░██░░██░░░░░░░░██░░██░░░░░░░░░░░░░░░░░░░░░░░░");
-		System.out.println("░░██░░░░░░░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░░░░░");
-		System.out.println("░░██░░░░░░░░░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░░░");
-		System.out.println("██░░░░██░░░░██░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░");
-		System.out.println("██░░░░░░░░░░░░░░░░░░░░░░░░████░░░░░░░░░░░░░░░░");
-		System.out.println("██░░░░░░████░░░░░░░░░░░░░░░░░░██████████████░░");
-		System.out.println("██░░██░░██░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░██");
-		System.out.println("██░░░░████████░░░░░░░░░░░░░░░░░░░░░░░░██████░░");
-		System.out.println("██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░");
-		System.out.println("██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░");
-		System.out.println("██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░");
-		System.out.println("██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░");
-		System.out.println("██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░");
-		System.out.println("░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░");
-		System.out.println("░░██░░░░████░░░░████████░░░░████░░░░██░░░░░░░░");
-		System.out.println("░░██░░░░████░░██░░░░░░██░░██░░██░░░░██░░░░░░░░");
-		System.out.println("░░██░░██░░░░██░░░░░░░░░░██░░░░██░░██░░░░░░░░░░");
-		System.out.println("░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░░░░░");
-		System.out.println("Arf Arf!");
+		for (String s : Arrays.asList("Registered UnderFabric objects.", " ", " ", " ", "░░░░██░░████████░░██░░░░░░░░░░░░░░░░░░░░░░░░░░", "░░██░░██░░░░░░░░██░░██░░░░░░░░░░░░░░░░░░░░░░░░", "░░██░░░░░░░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░░░░░", "░░██░░░░░░░░░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░░░", "██░░░░██░░░░██░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░", "██░░░░░░░░░░░░░░░░░░░░░░░░████░░░░░░░░░░░░░░░░", "██░░░░░░████░░░░░░░░░░░░░░░░░░██████████████░░", "██░░██░░██░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░██", "██░░░░████████░░░░░░░░░░░░░░░░░░░░░░░░██████░░", "██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░", "██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░", "██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░", "██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░", "██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░", "░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░", "░░██░░░░████░░░░████████░░░░████░░░░██░░░░░░░░", "░░██░░░░████░░██░░░░░░██░░██░░██░░░░██░░░░░░░░", "░░██░░██░░░░██░░░░░░░░░░██░░░░██░░██░░░░░░░░░░", "░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░░░░░", "Arf Arf!")) {
+			System.out.println(s);
+		}
 	}
 
 	// Create items to registered namespaces as per above

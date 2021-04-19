@@ -7,6 +7,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
@@ -22,6 +23,9 @@ public class seaTea extends Item{
         playerEntity.setStackInHand(hand, new ItemStack(Items.AIR));
         playerEntity.heal(10);
         playerEntity.setMovementSpeed(playerEntity.getMovementSpeed()+0.25F);
+        if (world.isClient) {
+            playerEntity.sendMessage(new TranslatableText("text.underfabric.sea_tea.use"), false);
+        }
         return TypedActionResult.success(playerEntity.getStackInHand(hand));
     }
 }

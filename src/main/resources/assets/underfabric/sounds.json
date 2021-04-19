@@ -4,5 +4,11 @@
     "sounds": [
       "underfabric:snd_heal_c"
     ]
+  },
+  "music.flowey":{
+    "sounds": [
+      "underfabric:mus_flowey"
+    ],
+    "stream": true
   }
 }
