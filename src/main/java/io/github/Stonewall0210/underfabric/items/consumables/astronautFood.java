@@ -23,7 +23,7 @@ public class astronautFood extends Item{
         playerEntity.setStackInHand(hand, new ItemStack(Items.AIR));
         playerEntity.heal(21);
         if (world.isClient) {
-            playerEntity.sendMessage(new TranslatableText("text.underfabric.astronaut_food.use"), false);
+            playerEntity.sendMessage(new TranslatableText("text.underfabric.placeholder_use"), false);
         }
         return TypedActionResult.success(playerEntity.getStackInHand(hand));
     }

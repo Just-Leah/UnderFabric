@@ -10,6 +10,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
+import net.minecraft.client.sound.Sound;
 import net.minecraft.item.*;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
@@ -37,11 +38,11 @@ public class UnderFabric implements ModInitializer {
 	public static final abandonedQuiche ABANDONED_QUICHE = new abandonedQuiche(new FabricItemSettings().group(ItemGroup.FOOD));
 	public static final temmieFlakes TEMMIE_FLAKES = new temmieFlakes(new FabricItemSettings().group(ItemGroup.FOOD));
 	public static final dogSalad DOG_SALAD = new dogSalad(new FabricItemSettings().group(ItemGroup.FOOD));
-	public static final monsterCandy INSTANT_NOODLES = new monsterCandy(new FabricItemSettings().group(ItemGroup.FOOD));
-	public static final monsterCandy HOT_DOG = new monsterCandy(new FabricItemSettings().group(ItemGroup.FOOD));
-	public static final monsterCandy HOT_CAT = new monsterCandy(new FabricItemSettings().group(ItemGroup.FOOD));
-	public static final monsterCandy JUNK_FOOD = new monsterCandy(new FabricItemSettings().group(ItemGroup.FOOD));
-	public static final monsterCandy HUSH_PUPPY = new monsterCandy(new FabricItemSettings().group(ItemGroup.FOOD));
+	public static final instantNoodles INSTANT_NOODLES = new instantNoodles(new FabricItemSettings().group(ItemGroup.FOOD));
+	public static final hotDog HOT_DOG = new hotDog(new FabricItemSettings().group(ItemGroup.FOOD));
+	public static final hotCat HOT_CAT = new hotCat(new FabricItemSettings().group(ItemGroup.FOOD));
+	public static final junkFood JUNK_FOOD = new junkFood(new FabricItemSettings().group(ItemGroup.FOOD));
+	public static final hushPuppy HUSH_PUPPY = new hushPuppy(new FabricItemSettings().group(ItemGroup.FOOD));
 	public static final monsterCandy STARFAIT = new monsterCandy(new FabricItemSettings().group(ItemGroup.FOOD));
 	public static final monsterCandy GLAMBURGER = new monsterCandy(new FabricItemSettings().group(ItemGroup.FOOD));
 	public static final monsterCandy LEGENDARY_HERO = new monsterCandy(new FabricItemSettings().group(ItemGroup.FOOD));
@@ -64,10 +65,14 @@ public class UnderFabric implements ModInitializer {
 	public static final Block SAVE_POINT = new savePoint(FabricBlockSettings.of(Material.AIR).strength(18000000f));
 
 	//Create sounds
-	public static final Identifier CONSUME_ITEM_ID = new Identifier("underfabric:item.consume");
+	public static final Identifier CONSUME_ITEM_ID = new Identifier("underfabric:sound.consume");
 	public static SoundEvent CONSUME_ITEM = new SoundEvent(CONSUME_ITEM_ID);
 	public static final Identifier FLOWEY_MUS_ID = new Identifier("underfabric:music.flowey");
 	public static SoundEvent FLOWEY_MUS = new SoundEvent(FLOWEY_MUS_ID);
+	public static final Identifier DOG_SALAD_SOUND_ID = new Identifier("underfabric:sound.dog_salad");
+	public static SoundEvent DOG_SALAD_SOUND = new SoundEvent(DOG_SALAD_SOUND_ID);
+	public static final Identifier CAT_SALAD_ID = new Identifier("underfabric:sound.cat_salad");
+	public static SoundEvent CAT_SALAD = new SoundEvent(CAT_SALAD_ID);
 
 	@Override
 	public void onInitialize() {
@@ -143,6 +148,8 @@ public class UnderFabric implements ModInitializer {
 		// Register sounds
 		Registry.register(Registry.SOUND_EVENT, UnderFabric.CONSUME_ITEM_ID, CONSUME_ITEM);
 		Registry.register(Registry.SOUND_EVENT, UnderFabric.FLOWEY_MUS_ID, FLOWEY_MUS);
+		Registry.register(Registry.SOUND_EVENT, UnderFabric.DOG_SALAD_SOUND_ID, DOG_SALAD_SOUND);
+		Registry.register(Registry.SOUND_EVENT, UnderFabric.CAT_SALAD_ID, CAT_SALAD);
 
 		// Ascii art!
 		for (String s : Arrays.asList("Registered UnderFabric objects.", " ", " ", " ", "░░░░██░░████████░░██░░░░░░░░░░░░░░░░░░░░░░░░░░", "░░██░░██░░░░░░░░██░░██░░░░░░░░░░░░░░░░░░░░░░░░", "░░██░░░░░░░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░░░░░", "░░██░░░░░░░░░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░░░", "██░░░░██░░░░██░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░", "██░░░░░░░░░░░░░░░░░░░░░░░░████░░░░░░░░░░░░░░░░", "██░░░░░░████░░░░░░░░░░░░░░░░░░██████████████░░", "██░░██░░██░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░██", "██░░░░████████░░░░░░░░░░░░░░░░░░░░░░░░██████░░", "██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░", "██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░", "██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░", "██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░", "██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░", "░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░", "░░██░░░░████░░░░████████░░░░████░░░░██░░░░░░░░", "░░██░░░░████░░██░░░░░░██░░██░░██░░░░██░░░░░░░░", "░░██░░██░░░░██░░░░░░░░░░██░░░░██░░██░░░░░░░░░░", "░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░░░░░", "Arf Arf!")) {

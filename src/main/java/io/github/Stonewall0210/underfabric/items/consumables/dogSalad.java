@@ -41,9 +41,6 @@ public class dogSalad extends Item{
             playerEntity.setHealth(playerEntity.getMaxHealth());
             playerEntity.sendMessage(new TranslatableText("text.underfabric.dog_salad.use.max"),false);
         }
-        else {
-            playerEntity.sendMessage(new TranslatableText("text.underfabric.dog_salad.use.fail"),false);
-        }
         return TypedActionResult.success(playerEntity.getStackInHand(hand));
     }
 }

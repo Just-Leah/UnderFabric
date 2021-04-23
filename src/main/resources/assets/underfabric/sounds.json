@@ -1,5 +1,5 @@
 {
-  "item.consume":{
+  "sound.consume":{
     "subtitle": "subtitle.underfabric.consume_item",
     "sounds": [
       "underfabric:snd_heal_c"
@@ -10,5 +10,17 @@
       "underfabric:mus_flowey"
     ],
     "stream": true
+  },
+  "sound.dog_salad": {
+    "subtitle": "subtitle.underfabric.dog_salad",
+    "sounds": [
+      "underfabric:snd_dogsalad"
+    ]
+  },
+  "sound.cat_salad": {
+    "subtitle": "subtitle.underfabric.cat_salad",
+    "sounds": [
+      "underfabric:snd_catsalad"
+    ]
   }
 }

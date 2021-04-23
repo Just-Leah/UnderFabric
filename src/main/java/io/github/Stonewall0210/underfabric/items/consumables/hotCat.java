@@ -12,20 +12,18 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
-public class seaTea extends Item{
-    public seaTea(Item.Settings group) {
+public class hotCat extends Item {
+    public hotCat(Item.Settings group) {
         super(new FabricItemSettings().group(ItemGroup.FOOD).maxCount(1));
     }
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
         playerEntity.playSound(UnderFabric.CONSUME_ITEM, 1.0F, 1.0F);
+        playerEntity.playSound(UnderFabric.CAT_SALAD, 1.0F, 1.0F);
         playerEntity.setStackInHand(hand, new ItemStack(Items.AIR));
-        playerEntity.heal(10);
-        playerEntity.setMovementSpeed(playerEntity.getMovementSpeed()+0.25F);
-        if (world.isClient) {
-            playerEntity.sendMessage(new TranslatableText("text.underfabric.placeholder_use"), false);
-        }
+        playerEntity.heal(21);
+        playerEntity.sendMessage(new TranslatableText("text.underfabric.placeholder_use"),false);
         return TypedActionResult.success(playerEntity.getStackInHand(hand));
     }
 }

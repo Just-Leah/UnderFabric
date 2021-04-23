@@ -24,7 +24,7 @@ public class crabApple extends Item{
         playerEntity.setStackInHand(hand, new ItemStack(Items.AIR));
         playerEntity.heal(18);
         if (world.isClient) {
-            playerEntity.sendMessage(new TranslatableText("text.underfabric.crab_apple.use"), false);
+            playerEntity.sendMessage(new TranslatableText("text.underfabric.placeholder_use"), false);
         }
         return TypedActionResult.success(playerEntity.getStackInHand(hand));
     }

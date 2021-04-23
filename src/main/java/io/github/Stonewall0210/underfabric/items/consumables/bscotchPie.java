@@ -23,7 +23,7 @@ public class bscotchPie extends Item{
         playerEntity.setStackInHand(hand, new ItemStack(Items.AIR));
         playerEntity.setHealth(playerEntity.getMaxHealth());
         if (world.isClient) {
-            playerEntity.sendMessage(new TranslatableText("text.underfabric.bscotch_pie.use"), false);
+            playerEntity.sendMessage(new TranslatableText("text.underfabric.placeholder_use"), false);
         }
         return TypedActionResult.success(playerEntity.getStackInHand(hand));
     }
