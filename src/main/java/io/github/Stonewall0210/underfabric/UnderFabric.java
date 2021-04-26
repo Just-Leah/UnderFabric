@@ -1,16 +1,21 @@
 package io.github.Stonewall0210.underfabric;
 
 import io.github.Stonewall0210.underfabric.blocks.savePoint;
+import io.github.Stonewall0210.underfabric.entities.characters.napstablookEntity;
 import io.github.Stonewall0210.underfabric.items.WeaponMaterial;
-import io.github.Stonewall0210.underfabric.items.weapons.*;
 import io.github.Stonewall0210.underfabric.items.consumables.*;
+import io.github.Stonewall0210.underfabric.items.weapons.*;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
-import net.minecraft.client.sound.Sound;
+import net.minecraft.entity.EntityDimensions;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.SpawnGroup;
 import net.minecraft.item.*;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
@@ -73,6 +78,13 @@ public class UnderFabric implements ModInitializer {
 	public static SoundEvent DOG_SALAD_SOUND = new SoundEvent(DOG_SALAD_SOUND_ID);
 	public static final Identifier CAT_SALAD_ID = new Identifier("underfabric:sound.cat_salad");
 	public static SoundEvent CAT_SALAD = new SoundEvent(CAT_SALAD_ID);
+
+	//Create entities
+	public static final EntityType<napstablookEntity> NAPSTABLOOK_ENTITY_ENTITY_TYPE = Registry.register(
+			Registry.ENTITY_TYPE,
+			new Identifier("underfabric", "napstablookentity"),
+			FabricEntityTypeBuilder.create(SpawnGroup.MISC, napstablookEntity::new).dimensions(EntityDimensions.fixed(0.75f, 0.75f)).build()
+	);
 
 	@Override
 	public void onInitialize() {
@@ -150,6 +162,10 @@ public class UnderFabric implements ModInitializer {
 		Registry.register(Registry.SOUND_EVENT, UnderFabric.FLOWEY_MUS_ID, FLOWEY_MUS);
 		Registry.register(Registry.SOUND_EVENT, UnderFabric.DOG_SALAD_SOUND_ID, DOG_SALAD_SOUND);
 		Registry.register(Registry.SOUND_EVENT, UnderFabric.CAT_SALAD_ID, CAT_SALAD);
+
+		System.out.println("Registering Underfabric entities...");
+		// Register entity related code
+		FabricDefaultAttributeRegistry.register(NAPSTABLOOK_ENTITY_ENTITY_TYPE, napstablookEntity.createMobAttributes());
 
 		// Ascii art!
 		for (String s : Arrays.asList("Registered UnderFabric objects.", " ", " ", " ", "░░░░██░░████████░░██░░░░░░░░░░░░░░░░░░░░░░░░░░", "░░██░░██░░░░░░░░██░░██░░░░░░░░░░░░░░░░░░░░░░░░", "░░██░░░░░░░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░░░░░", "░░██░░░░░░░░░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░░░", "██░░░░██░░░░██░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░", "██░░░░░░░░░░░░░░░░░░░░░░░░████░░░░░░░░░░░░░░░░", "██░░░░░░████░░░░░░░░░░░░░░░░░░██████████████░░", "██░░██░░██░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░██", "██░░░░████████░░░░░░░░░░░░░░░░░░░░░░░░██████░░", "██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░", "██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░", "██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░", "██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░", "██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░", "░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░", "░░██░░░░████░░░░████████░░░░████░░░░██░░░░░░░░", "░░██░░░░████░░██░░░░░░██░░██░░██░░░░██░░░░░░░░", "░░██░░██░░░░██░░░░░░░░░░██░░░░██░░██░░░░░░░░░░", "░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░░░░░", "Arf Arf!")) {
