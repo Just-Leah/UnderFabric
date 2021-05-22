@@ -19,6 +19,10 @@ repositories {
 	maven {
 		url "https://maven.falseresync.ru"
 	}
+	maven {
+		url "https://maven.fabricmc.net"
+	}
+
 }
 
 dependencies {
