@@ -12,8 +12,8 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
-public class snailPie extends Item{
-    public snailPie(Item.Settings group) {
+public class badMemory extends Item {
+    public badMemory(Settings group) {
         super(new FabricItemSettings().group(ItemGroup.FOOD).maxCount(1));
     }
 
@@ -23,16 +23,11 @@ public class snailPie extends Item{
         playerEntity.setStackInHand(hand, new ItemStack(Items.AIR));
         float currentHealth = playerEntity.getHealth();
         float maxHealth = playerEntity.getMaxHealth();
-        if (currentHealth != maxHealth){
-            playerEntity.setHealth(maxHealth - 1);
-            if (world.isClient) {
-                playerEntity.sendMessage(new TranslatableText("text.underfabric.placeholder_use"), false);
-            }
+        if (currentHealth >= 4.0){
+            playerEntity.heal(-1);
         }
         else{
-            if (world.isClient) {
-                playerEntity.sendMessage(new TranslatableText("text.underfabric.snail_pie.use_at_full_health"), false);
-            }
+            playerEntity.setHealth(maxHealth);
         }
         if (world.isClient) {
             playerEntity.sendMessage(new TranslatableText("text.underfabric.placeholder_use"), false);

@@ -1,7 +1,7 @@
 package io.github.Stonewall0210.underfabric;
 
 import io.github.Stonewall0210.underfabric.blocks.savePoint;
-import io.github.Stonewall0210.underfabric.entities.characters.napstablookEntity;
+import io.github.Stonewall0210.underfabric.entities.characters.napstablook;
 import io.github.Stonewall0210.underfabric.items.WeaponMaterial;
 import io.github.Stonewall0210.underfabric.items.consumables.*;
 import io.github.Stonewall0210.underfabric.items.weapons.*;
@@ -48,19 +48,19 @@ public class UnderFabric implements ModInitializer {
 	public static final hotCat HOT_CAT = new hotCat(new FabricItemSettings().group(ItemGroup.FOOD));
 	public static final junkFood JUNK_FOOD = new junkFood(new FabricItemSettings().group(ItemGroup.FOOD));
 	public static final hushPuppy HUSH_PUPPY = new hushPuppy(new FabricItemSettings().group(ItemGroup.FOOD));
-	public static final monsterCandy STARFAIT = new monsterCandy(new FabricItemSettings().group(ItemGroup.FOOD));
-	public static final monsterCandy GLAMBURGER = new monsterCandy(new FabricItemSettings().group(ItemGroup.FOOD));
-	public static final monsterCandy LEGENDARY_HERO = new monsterCandy(new FabricItemSettings().group(ItemGroup.FOOD));
-	public static final monsterCandy FACE_STEAK = new monsterCandy(new FabricItemSettings().group(ItemGroup.FOOD));
-	public static final monsterCandy POPATO_CHISPS = new monsterCandy(new FabricItemSettings().group(ItemGroup.FOOD));
-	public static final monsterCandy BAD_MEMORY = new monsterCandy(new FabricItemSettings().group(ItemGroup.FOOD));
-	public static final monsterCandy LAST_DREAM = new monsterCandy(new FabricItemSettings().group(ItemGroup.FOOD));
-	public static final monsterCandy PUPPY_ICE_CREAM = new monsterCandy(new FabricItemSettings().group(ItemGroup.FOOD));
-	public static final monsterCandy PUMPKIN_RINGS = new monsterCandy(new FabricItemSettings().group(ItemGroup.FOOD));
-	public static final monsterCandy ROCK_CANDY = new monsterCandy(new FabricItemSettings().group(ItemGroup.FOOD));
-	public static final monsterCandy CROQUET_ROLL = new monsterCandy(new FabricItemSettings().group(ItemGroup.FOOD));
-	public static final monsterCandy GHOST_FRUIT = new monsterCandy(new FabricItemSettings().group(ItemGroup.FOOD));
-	public static final monsterCandy STOIC_ONION = new monsterCandy(new FabricItemSettings().group(ItemGroup.FOOD));
+	public static final starfait STARFAIT = new starfait(new FabricItemSettings().group(ItemGroup.FOOD));
+	public static final glamburger GLAMBURGER = new glamburger(new FabricItemSettings().group(ItemGroup.FOOD));
+	public static final legendaryHero LEGENDARY_HERO = new legendaryHero(new FabricItemSettings().group(ItemGroup.FOOD));
+	public static final faceSteak FACE_STEAK = new faceSteak(new FabricItemSettings().group(ItemGroup.FOOD));
+	public static final popatoChisps POPATO_CHISPS = new popatoChisps(new FabricItemSettings().group(ItemGroup.FOOD));
+	public static final badMemory BAD_MEMORY = new badMemory(new FabricItemSettings().group(ItemGroup.FOOD));
+	public static final lastDream LAST_DREAM = new lastDream(new FabricItemSettings().group(ItemGroup.FOOD));
+	public static final puppyIceCream PUPPY_ICE_CREAM = new puppyIceCream(new FabricItemSettings().group(ItemGroup.FOOD));
+	public static final pumpkinRings PUMPKIN_RINGS = new pumpkinRings(new FabricItemSettings().group(ItemGroup.FOOD));
+	public static final rockCandy ROCK_CANDY = new rockCandy(new FabricItemSettings().group(ItemGroup.FOOD));
+	public static final croquetRoll CROQUET_ROLL = new croquetRoll(new FabricItemSettings().group(ItemGroup.FOOD));
+	public static final ghostFruit GHOST_FRUIT = new ghostFruit(new FabricItemSettings().group(ItemGroup.FOOD));
+	public static final stoicOnion STOIC_ONION = new stoicOnion(new FabricItemSettings().group(ItemGroup.FOOD));
 
 	// Create blocks
 	public static final Block RUINS_DEFAULT = new Block(FabricBlockSettings.of(Material.STONE).strength(1.3f));
@@ -78,17 +78,19 @@ public class UnderFabric implements ModInitializer {
 	public static SoundEvent DOG_SALAD_SOUND = new SoundEvent(DOG_SALAD_SOUND_ID);
 	public static final Identifier CAT_SALAD_ID = new Identifier("underfabric:sound.cat_salad");
 	public static SoundEvent CAT_SALAD = new SoundEvent(CAT_SALAD_ID);
+	public static Identifier GHOSTFIGHT_ID = new Identifier("underfabric:music.ghostbattle");
+	public static SoundEvent GHOSTFIGHT = new SoundEvent(GHOSTFIGHT_ID);
 
 	//Create entities
-	public static final EntityType<napstablookEntity> NAPSTABLOOK_ENTITY_ENTITY_TYPE = Registry.register(
+	public static final EntityType<napstablook> NAPSTABLOOK_ENTITY_ENTITY_TYPE = Registry.register(
 			Registry.ENTITY_TYPE,
-			new Identifier("underfabric", "napstablookentity"),
-			FabricEntityTypeBuilder.create(SpawnGroup.MISC, napstablookEntity::new).dimensions(EntityDimensions.fixed(0.75f, 0.75f)).build()
+			new Identifier("underfabric", "napstablook"),
+			FabricEntityTypeBuilder.create(SpawnGroup.MISC, napstablook::new).dimensions(EntityDimensions.fixed(0.75f, 0.75f)).build()
 	);
 
 	@Override
 	public void onInitialize() {
-		System.out.println("Registering UnderFabric objects:");
+		System.out.println("Registering global UnderFabric objects:");
 
 		System.out.println("Registering UnderFabric items...");
 		// Register Items
@@ -162,10 +164,11 @@ public class UnderFabric implements ModInitializer {
 		Registry.register(Registry.SOUND_EVENT, UnderFabric.FLOWEY_MUS_ID, FLOWEY_MUS);
 		Registry.register(Registry.SOUND_EVENT, UnderFabric.DOG_SALAD_SOUND_ID, DOG_SALAD_SOUND);
 		Registry.register(Registry.SOUND_EVENT, UnderFabric.CAT_SALAD_ID, CAT_SALAD);
+		Registry.register(Registry.SOUND_EVENT, UnderFabric.GHOSTFIGHT_ID, GHOSTFIGHT);
 
-		System.out.println("Registering Underfabric entities...");
+		System.out.println("Registering Underfabric entities (global)...");
 		// Register entity related code
-		FabricDefaultAttributeRegistry.register(NAPSTABLOOK_ENTITY_ENTITY_TYPE, napstablookEntity.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(NAPSTABLOOK_ENTITY_ENTITY_TYPE, napstablook.createMobAttributes());
 
 		// Ascii art!
 		for (String s : Arrays.asList("Registered UnderFabric objects.", " ", " ", " ", "░░░░██░░████████░░██░░░░░░░░░░░░░░░░░░░░░░░░░░", "░░██░░██░░░░░░░░██░░██░░░░░░░░░░░░░░░░░░░░░░░░", "░░██░░░░░░░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░░░░░", "░░██░░░░░░░░░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░░░", "██░░░░██░░░░██░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░", "██░░░░░░░░░░░░░░░░░░░░░░░░████░░░░░░░░░░░░░░░░", "██░░░░░░████░░░░░░░░░░░░░░░░░░██████████████░░", "██░░██░░██░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░██", "██░░░░████████░░░░░░░░░░░░░░░░░░░░░░░░██████░░", "██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░", "██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░", "██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░", "██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░", "██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░", "░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░", "░░██░░░░████░░░░████████░░░░████░░░░██░░░░░░░░", "░░██░░░░████░░██░░░░░░██░░██░░██░░░░██░░░░░░░░", "░░██░░██░░░░██░░░░░░░░░░██░░░░██░░██░░░░░░░░░░", "░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░░░░░", "Arf Arf!")) {

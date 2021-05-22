@@ -8,7 +8,7 @@ import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.util.math.MatrixStack;
 
-public class napstablookModel extends EntityModel<napstablookEntity> {
+public class napstablookModel extends EntityModel<napstablook> {
 	private final ModelPart bb_main;
 	public napstablookModel() {
 	 	this.textureWidth = 64;
@@ -18,7 +18,7 @@ public class napstablookModel extends EntityModel<napstablookEntity> {
 		bb_main.setTextureOffset(0, 0).addCuboid(-6.0F, -21.0F, -5.0F, 12.0F, 21.0F, 10.0F, 0.0F, false);
 	}
 	@Override
-	public void setAngles( napstablookEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch){
+	public void setAngles(napstablook entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch){
 		//previously the render function, render code was moved to a method below
 	}
 	@Override

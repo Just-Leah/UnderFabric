@@ -49,6 +49,7 @@
   "block.underfabric.ruins_default": "Ruins Stone",
   "block.underfabric.ruins_leaves": "Fallen Ruins Leaves Block",
   "block.underfabric.ruins_path": "Ruins Stone Pathway",
+  "entity.underfabric.napstablook": "Napstablook",
   "item.underfabric.abandoned_quiche": "Abandoned Quiche",
   "item.underfabric.astronaut_food": "Astronaut Food",
   "item.underfabric.bad_memory": "Bad Memory",
@@ -118,6 +119,7 @@
   "text.underfabric.dog_salad.use.max": "It's literally garbage???",
   "text.underfabric.hush_puppy.use": "You eat the Hush Puppy. Dog-magic is neutralized.",
   "text.underfabric.instant_noodles.use": "You remove the instant noodles from their packaging. You put some water in the pot and place it on the heat. You wait for the water to boil... ... ... ... It's boiling. You place the noodles into the pot. 4 minutes left until the noodles are finished. 3 minutes left until the noodles are finished. 2 minutes left until the noodles are finished. 1 minute left until the noodles are finished. The noodles are finished. ...they don't taste very good. You add the flavour packet. That's better. Not great, but better. You ate the Instant Noodles",
+  "text.underfabric.last_dream.use": "Through DETERMINATION, the dream became true.",
   "text.underfabric.monster_candy.use.1": "You ate the Monster Candy. Very un-licorice-like.",
   "text.underfabric.monster_candy.use.2": "You ate the Monster Candy. ... tastes like licorice.",
   "text.underfabric.nice_cream.use.1": "You're super spiffy!",
@@ -129,8 +131,15 @@
   "text.underfabric.nice_cream.use.7": "Is this as sweet as you?",
   "text.underfabric.nice_cream.use.8": "You're just great!",
   "text.underfabric.placeholder_use": "[PLACEHOLDER USE TEXT]",
+  "text.underfabric.puppy_ice_cream.use": "Mmm! Tastes like puppies.",
   "text.underfabric.snowman_piece.use": "You ate the Snowman Piece.",
   "text.underfabric.spider_cider.use": "You drank the Spider Cider.",
   "text.underfabric.spider_donut.use": "Don't worry, spider didn't.",
-  "text.underfabric.unisicle.use": "You ate the Unisicle."
+  "text.underfabric.unisicle.use": "You ate the Unisicle.",
+  "text.underfabric.pumpkin_rings.use": "You ate the Pumpkin Rings.",
+  "text.underfabric.rock_candy.use": "You ate the Rock Candy.",
+  "text.underfabric.croquet_roll.use": "You hit the Croquet Roll into your mouth.",
+  "text.underfabric.ghost_fruit.use": "You ate the Ghost Fruit.",
+  "text.underfabric.stoic_onion.use": "You ate the Stoic Onion. You didn't cry...",
+  "text.underfabric.snail_pie.use_at_full_health": "I don't really know about you, but I think that it's kinda a waste to eat this at full health. But I'll let you do you, I don't really mind."
 }

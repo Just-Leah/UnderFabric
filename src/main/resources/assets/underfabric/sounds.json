@@ -1,26 +1,32 @@
 {
-  "sound.consume":{
-    "subtitle": "subtitle.underfabric.consume_item",
-    "sounds": [
-      "underfabric:snd_heal_c"
-    ]
-  },
-  "music.flowey":{
+  "music.flowey": {
     "sounds": [
       "underfabric:mus_flowey"
     ],
     "stream": true
   },
-  "sound.dog_salad": {
-    "subtitle": "subtitle.underfabric.dog_salad",
+  "music.ghostbattle": {
     "sounds": [
-      "underfabric:snd_dogsalad"
-    ]
+      "underfabric:mus_ghostbattle"
+    ],
+    "stream": true
   },
   "sound.cat_salad": {
-    "subtitle": "subtitle.underfabric.cat_salad",
     "sounds": [
       "underfabric:snd_catsalad"
-    ]
+    ],
+    "subtitle": "subtitle.underfabric.cat_salad"
+  },
+  "sound.consume": {
+    "sounds": [
+      "underfabric:snd_heal_c"
+    ],
+    "subtitle": "subtitle.underfabric.consume_item"
+  },
+  "sound.dog_salad": {
+    "sounds": [
+      "underfabric:snd_dogsalad"
+    ],
+    "subtitle": "subtitle.underfabric.dog_salad"
   }
 }
